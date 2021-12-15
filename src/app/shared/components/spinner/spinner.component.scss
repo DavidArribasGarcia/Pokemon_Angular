@@ -1,0 +1,19 @@
+@import "../../../styles/base";
+
+
+
+.spinner {
+
+  min-height: calc(100vh - 112px);
+
+  padding: 0 2rem;
+
+  @include center;
+
+  @media (min-width: 991px) {
+
+    min-height: calc(100vh - 184px);
+
+  }
+
+}

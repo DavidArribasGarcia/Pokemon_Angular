@@ -1,0 +1,14 @@
+<ng-container class="grid" *ngIf="pokemon$ | async as pokemon;else loading">
+    <section class="grid">
+        <ng-container *ngFor="let Pokemon of pokemon">
+            <!-- <app-card [] -->
+
+        </ng-container>
+        
+    </section>
+</ng-container>
+
+<ng-template #loading>
+    <app-spinner></app-spinner>
+</ng-template>
+
