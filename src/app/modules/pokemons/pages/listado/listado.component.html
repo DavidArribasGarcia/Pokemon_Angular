@@ -1,10 +1,7 @@
-<ng-container class="grid" *ngIf="pokemon$ | async as pokemon;else loading">
+<ng-container class="grid" *ngIf="pokemon$ | async as pokemons;else loading">
     <section class="grid">
-        <ng-container *ngFor="let Pokemon of pokemon">
-            <!-- <app-card [] -->
-
-        </ng-container>
-        
+        <!-- <div>{{pokemons | json}}</div> -->
+        <app-list [result]="pokemons"></app-list>
     </section>
 </ng-container>
 

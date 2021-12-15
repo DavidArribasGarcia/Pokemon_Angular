@@ -1,0 +1,24 @@
+<mat-card *ngIf="pokemonUnico">
+    <mat-card-header class="header">
+      <mat-card-title>{{pokemonUnico.name}}</mat-card-title>
+      <mat-card-subtitle>{{pokemonUnico.id}}</mat-card-subtitle>
+    </mat-card-header>
+    <img 
+    mat-card-image
+     [src]="pokemonUnico.pic"
+     [alt]="pokemonUnico.name"
+     >
+    <!-- <mat-card-content>
+        <h3>{{movie.release_date | date}}</h3>
+      <p>
+        {{movie.overview | slice: 0:100}}
+        <span *ngIf="movie.overview.length> 100">...</span>
+      </p>
+    </mat-card-content> -->
+    <mat-card-actions>
+      <button mat-raised-button color="warn">
+        <mat-icon aria-hidden="false">favorite</mat-icon>
+      </button>
+      <button mat-raised-button color="primary">Mas info</button>
+    </mat-card-actions>
+  </mat-card>
