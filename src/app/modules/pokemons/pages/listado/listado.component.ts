@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Pokemon } from 'src/app/core/models/pokemon.interface';
 import { ApiService } from 'src/app/core/services/api.service';
 
@@ -15,5 +15,19 @@ export class ListadoComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokemon$ = this.apiService.getAllPokemons();
+  }
+
+  buscador(busqueda: string) {
+    if (busqueda.length >= 1) {
+      this.pokemon$ = this.apiService
+        .getAllPokemons()
+        .pipe(
+          map((data: Pokemon[]) =>
+            data.filter((pokemon: Pokemon) => pokemon.name.includes(busqueda))
+          )
+        );
+    }else{
+      this.pokemon$ = this.apiService.getAllPokemons();
+    }
   }
 }

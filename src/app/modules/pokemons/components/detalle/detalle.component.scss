@@ -1,0 +1,50 @@
+@import "../../../../styles/base";
+
+:host {
+  .card {
+    align-items: center;
+    display: flex;
+    margin: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(190, 109, 3);
+
+    &-img-container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 40%;
+
+      img {
+        width: 100%;
+        margin: 2rem;
+      }
+    }
+
+    &-moves {
+        justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      p {
+        padding: 0.5rem;
+      }
+    }
+    
+  }
+  .movimientos{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .movesIndividual:hover{
+        background-color: rgb(248, 144, 8);
+    }
+    .movesIndividual:hover {
+        
+        transform:scale(1.12);
+        }
+}
+

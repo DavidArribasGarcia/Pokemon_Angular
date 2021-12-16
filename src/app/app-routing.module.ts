@@ -20,7 +20,7 @@ const routes: Routes = [
       import('./modules/welcome/welcome.module').then((m) => m.WelcomeModule),
   },
   {
-    path: 'detalle',
+    path: 'detalle/:id',
     loadChildren: () =>
       import('./modules/pokemons/pages/detalles/detalles.module').then((m) => m.DetallesModule),
   },

@@ -1,4 +1,7 @@
-<ng-container *ngFor="let pokemon of result">
-    <app-card [pokemonUnico]="pokemon"></app-card>
+<ng-container>
+  <mat-grid-list cols="5" gutterSize="10px" class="lista">
+    <mat-grid-tile *ngFor="let pokemon of result">
+      <app-card [pokemonUnico]="pokemon"></app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 </ng-container>
-

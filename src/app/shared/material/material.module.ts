@@ -13,6 +13,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTableModule } from '@angular/material/table';
 
 const modules = [
   MatToolbarModule,
@@ -29,6 +32,9 @@ const modules = [
   MatSelectModule,
   MatSlideToggleModule,
   MatNativeDateModule,
+  MatListModule,
+  MatGridListModule,
+  MatTableModule,
 ];
 
 @NgModule({

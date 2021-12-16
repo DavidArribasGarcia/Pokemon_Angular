@@ -1,1 +1,5 @@
-<p>detalles works!</p>
+<ng-container *ngIf="pokemonDetails$ | async as pokemon" class="grid">
+    
+    <app-detalle [pokemon]="pokemon"></app-detalle>
+
+</ng-container>

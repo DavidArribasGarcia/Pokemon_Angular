@@ -1,0 +1,21 @@
+@import "../../../../styles/base";
+.form{
+    display: flex;
+    flex-direction: column;
+    min-width: 50vw;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    background-color: rgb(2, 48, 88)
+}
+
+mat-form-field{
+    padding: 0.5rem;
+}
+
+
+.btn-container{
+    @include center;
+}

@@ -1,1 +1,27 @@
-<p>login works!</p>
+
+<form class="form" autocomplete="off" [formGroup]="form" (ngSubmit)="handleSubmit()">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Usuario</mat-label>
+      <input matInput formControlName="user">
+      <mat-error *ngIf="userValid">
+        Este campo es requerido
+      </mat-error>
+  
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput formControlName="pass">
+        <mat-error *ngIf="passValid">
+          Este campo es requerido
+        </mat-error>
+      </mat-form-field>
+
+      <div class="btn-container">
+          <button color="primary" type="submit" mat-raised-button>LogIn</button>
+      </div>
+
+      
+
+  </form>

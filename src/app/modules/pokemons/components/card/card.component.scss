@@ -1,4 +1,20 @@
+mat-card{
+    padding: 3.5rem;
+    max-width: 160px;
+}
+
+img{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 .header{
-    height: 100px;
-    overflow: hidden;
+    color: rgb(15, 49, 49);
+}
+
+:host{
+    mat-card{
+        background-color: transparent;
+    }
+    
 }

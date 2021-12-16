@@ -1,1 +1,39 @@
-<p>home works!</p>
+<ng-container class="grid">
+  <mat-grid-list cols="2" class="listado"  rowHeight="350px" >
+    <mat-grid-tile>
+      <mat-card class="card" routerLink="/pokemon" routerLinkActive="active">
+        <mat-card-header class="header">
+          <mat-card-title>Listado Pokemon</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="../../../../../assets/pokedex.png"
+          alt="Listado Pokemon"
+        />
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="card" routerLink="/equipo" routerLinkActive="active">
+        <mat-card-header class="header">
+          <mat-card-title>Equipo Pokemon</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="../../../../../assets/equipo.png"
+          alt="Equipo Pokemon"
+        /> </mat-card
+    ></mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="card" routerLink="/crear" routerLinkActive="active">
+        <mat-card-header class="header">
+          <mat-card-title>Crear Pokemon</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="../../../../../assets/crear.png"
+          alt="Crear Pokemon"
+        />
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-container>
