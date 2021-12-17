@@ -1,20 +1,31 @@
-mat-card{
-    padding: 3.5rem;
-    max-width: 160px;
+mat-card {
+  padding: 3.5rem;
+  max-width: 180px;
+  min-width: 150px;
+  
+}
+img:hover{
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
 }
 
-img{
-    max-width: 100%;
-    margin: 0 auto;
+img {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.header{
+:host {
+  mat-card {
+    background-color: azure;
+  }
+  .header {
     color: rgb(15, 49, 49);
-}
-
-:host{
-    mat-card{
-        background-color: transparent;
-    }
-    
+    margin: 0 auto;
+    justify-content: center;
+  }
+  mat-card-actions {
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+  }
 }

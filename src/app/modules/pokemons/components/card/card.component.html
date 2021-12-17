@@ -1,18 +1,25 @@
 <mat-card *ngIf="pokemonUnico" >
-    <mat-card-header class="header">
-      <mat-card-title>{{pokemonUnico.name}}</mat-card-title>
-      <!-- <mat-card-subtitle>{{pokemonUnico.id}}</mat-card-subtitle> -->
-    </mat-card-header>
-    <img 
-    mat-card-image
-     [src]="pokemonUnico.pic"
-     [alt]="pokemonUnico.name"
-     >
+  <mat-card-header class="header">
+    <mat-card-title>{{ pokemonUnico.name }}</mat-card-title>
+    <!-- <mat-card-subtitle>{{pokemonUnico.id}}</mat-card-subtitle> -->
+  </mat-card-header>
+  <img mat-card-image [src]="pokemonUnico.pic" [alt]="pokemonUnico.name" />
 
-    <mat-card-actions>
-      <button mat-raised-button color="warn">
-        <mat-icon aria-hidden="false">favorite</mat-icon>
-      </button>
-      <button mat-raised-button color="primary" (click)="handleClick(pokemonUnico)">Mas info</button>
-    </mat-card-actions>
-  </mat-card>
+  <mat-card-actions>
+    <button
+      mat-icon-button
+      color="warn"
+      (click)="aniadirEquipo(pokemonUnico)"
+    >
+      <mat-icon *ngIf="!pokemonUnico.inTeam">favorite_border</mat-icon>
+      <mat-icon *ngIf="pokemonUnico.inTeam">favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      color="primary"
+      (click)="handleClick(pokemonUnico)"
+    >
+      <mat-icon aria-hidden="false">info</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

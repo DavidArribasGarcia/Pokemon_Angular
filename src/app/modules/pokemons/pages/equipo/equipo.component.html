@@ -1,1 +1,13 @@
-<p>equipo works!</p>
+<ng-container class="grid" *ngIf="(ejemplo$ | async)?.length;else loading">
+    <ng-container *ngIf="ejemplo$ | async as pokemon">
+        <section class="grid">
+        <app-list [result]="pokemon"></app-list>
+        </section>
+    </ng-container>
+</ng-container>
+<ng-template #loading>
+    <h1 class="titulo animate animate__bounceIn">Tu equipo Pokemon está vacio!</h1>
+    <app-spinner>
+        
+    </app-spinner>
+</ng-template>

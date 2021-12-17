@@ -1,0 +1,7 @@
+@import "../../../../styles/base";
+.titulo{
+    margin-top: 50px;
+    font-size: 4rem;
+    color: rgb(231, 133, 5);
+    @include center;
+}
