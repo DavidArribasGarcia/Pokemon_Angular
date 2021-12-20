@@ -15,6 +15,7 @@
       <mat-icon *ngIf="pokemonUnico.inTeam">favorite</mat-icon>
     </button>
     <button
+    [disabled]="!pokemonUnico.notCustom"
       mat-icon-button
       color="primary"
       (click)="handleClick(pokemonUnico)"

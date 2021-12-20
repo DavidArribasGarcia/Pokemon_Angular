@@ -1,1 +1,35 @@
-<p>crear works!</p>
+
+<form class="form" autocomplete="off" [formGroup]="form" (ngSubmit)="handleSubmit()">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre del Pokemon</mat-label>
+      <input matInput formControlName="name">
+      <mat-error *ngIf="nameValid">
+        Este campo es requerido
+      </mat-error>
+  
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" (click)="handleClick()">
+        <mat-label>Sprite del Pokemon</mat-label>
+        <input matInput formControlName="pic">
+        <mat-error *ngIf="spriteValid">
+          Este campo es requerido
+        </mat-error>
+      </mat-form-field>
+      <input 
+      #img
+      class="visibilidad"
+      type="file"
+      [(ngModel)]="image"
+      formControlName="upload"
+      (ngModelChange)="uploadImg($event)"
+      />
+
+      <div class="btn-container">
+          <button color="primary" type="submit" mat-raised-button>Crear Pokemon</button>
+      </div>
+
+      
+
+  </form>

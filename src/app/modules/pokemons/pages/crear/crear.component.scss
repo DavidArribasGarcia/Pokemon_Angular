@@ -1,0 +1,27 @@
+@import "../../../../styles/base";
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 31vw;
+    padding: 1rem;
+    background-color: rgb(134, 92, 0);
+    align-content: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+mat-form-field{
+    padding: 1rem;
+    width: 100%;
+}
+
+
+.btn-container{
+    @include center;
+}
+.visibilidad{
+    visibility: hidden;
+}

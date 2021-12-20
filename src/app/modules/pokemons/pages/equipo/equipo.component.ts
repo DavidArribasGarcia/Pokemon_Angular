@@ -17,7 +17,7 @@ export class EquipoComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.ejemplo$=this.teamService.pokemonTeam$;
+    this.ejemplo$=this.teamService.pokemonTeam;
   }
 
 }

@@ -1,7 +1,6 @@
 <app-busqueda (emisor)="buscador($event)"></app-busqueda>
 <ng-container class="grid" *ngIf="pokemon$ | async as pokemons;else loading">
     <section class="grid">
-        <!-- <div>{{pokemons | json}}</div> -->
         <app-list [result]="pokemons"></app-list>
     </section>
 </ng-container>
