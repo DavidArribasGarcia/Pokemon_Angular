@@ -29,6 +29,7 @@ export class CardComponent implements OnInit {
          timer: 2000,
        });
     }else{
+      this.teamService.removerPokemonEquipo(pokemon);
       Swal.fire({
         position: 'center',
         icon: 'error',

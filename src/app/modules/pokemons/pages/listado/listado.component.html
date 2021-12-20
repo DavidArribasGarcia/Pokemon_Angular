@@ -1,11 +1,16 @@
 <app-busqueda (emisor)="buscador($event)"></app-busqueda>
-<ng-container class="grid" *ngIf="pokemon$ | async as pokemons;else loading">
-    <section class="grid">
-        <app-list [result]="pokemons"></app-list>
-    </section>
+<ng-container *ngIf="pokemon$ | async as pokemons; else loading">
+  <section class="grid">
+    <app-list [result]="pokemons"></app-list>
+  </section>
+
+  <section *ngIf="!(pokemons.length) && buscando">
+    <p>
+      No se ha encontrado nada con ese nombre...
+    </p>
+  </section>
 </ng-container>
 
 <ng-template #loading>
-    <app-spinner></app-spinner>
+  <app-spinner></app-spinner>
 </ng-template>
-

@@ -47,7 +47,7 @@ export class CrearComponent implements OnInit {
         icon: 'success',
         title: `${this.form.get('name')?.value} se creó correctamente!`,
         showConfirmButton: false,
-        timer: 1500,
+        timer: 2000,
       });
       this.router.navigate(['/pokemon']);
     } else {

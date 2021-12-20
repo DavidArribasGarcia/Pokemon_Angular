@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, take } from 'rxjs';
 import { Pokemon } from '../core/models/pokemon.interface';
 
 @Injectable({
@@ -24,6 +24,15 @@ export class TeamService {
     const equipoActual = this.subject.value;
     const equipoActualizado = [...equipoActual, pokemon];
     this.subject.next(equipoActualizado);
+  }
+
+  removerPokemonEquipo(pokemonEliminar: Pokemon):void{
+    this.pokemonTeam$.pipe(take(1)).subscribe((pokemons:Pokemon[]) => {
+      const nuevaLista = pokemons.filter(
+        (pokemon:Pokemon) => pokemon.id !== pokemonEliminar.id
+      );
+      this.subject.next(nuevaLista);
+    })
   }
 
   crearPokemonCustom(pokemon: any): void {
