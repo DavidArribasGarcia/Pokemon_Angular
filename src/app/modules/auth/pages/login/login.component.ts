@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -46,6 +47,13 @@ export class LoginComponent implements OnInit {
 
   handleSubmit(): void{
     if(this.form.valid){
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: `Logueado correctamente ${this.form.get('user')?.value}!`,
+        showConfirmButton: false,
+        timer: 2000,
+      });
       this.authService.autorizado();
       this.router.navigate(['home']);
     }else{
